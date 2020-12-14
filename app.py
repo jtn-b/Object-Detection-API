@@ -70,9 +70,19 @@ def get_detections():
 
         t1 = time.time()
         boxes, scores, classes, nums = yolo(img)
+        # print('Custom Print Statements Begin')
+        # print('Boxes:')f
+        # print('Scores:')
+        # print(scores)
+        # print('classes:')
+        # print(classes)
+        # print('nums:')
+        # print(nums)
+        # print('Custom Print Statements End')
+
         t2 = time.time()
         print('time: {}'.format(t2 - t1))
-
+        coordinatesData = {}
         print('detections:')
         for i in range(nums[0]):
             print('\t{}, {}, {}'.format(class_names[int(classes[0][i])],
